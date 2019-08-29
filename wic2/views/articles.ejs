@@ -1,0 +1,12 @@
+<div>
+    <% for(var i=0; i < obj.articles.length; i++) { %>
+    <div>
+        <%= i %>
+        <a href="<%- '/article/' + obj.articles[i].id -%>" ><%= obj.articles[i].title %></a>
+        <p><%= obj.articles[i].content %></p>
+    </div>
+    <hr/>
+    <% } %>
+    <hr/>
+</div>
+

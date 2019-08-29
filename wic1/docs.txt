@@ -1,0 +1,1 @@
+fs.readFile(__dirname + 'docs.txt', 'utf-8', (err, data =>) 444444
