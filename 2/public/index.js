@@ -16,5 +16,5 @@ function handleClick () {
             alert('STATUS 200!')
         }
     })
-      .catch(error => console.error('Ошибка:', error));
+      .catch(error => console.error('error', error));
 }
