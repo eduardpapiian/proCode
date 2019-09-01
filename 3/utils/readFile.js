@@ -1,10 +1,14 @@
-const fs = require('fs')
+const fs = require('fs');
+const path = require('path');
+
 
 function readFile (url) {
     return new Promise((resolve, reject) => {
-        let test = process.cwd() + url
+        let test = path.join(process.cwd(), url)
+        let test2 = path.join(__dirname, url)
         console.log('test', test)
-        fs.readFile(process.cwd() + url, 'utf-8', (err, data ) =>{
+        console.log('test2', test2)
+        fs.readFile(path.join(process.cwd(),  url), 'utf-8', (err, data ) =>{
             if(data){
                 console.log('DATA IN PROMISE', data)
                 resolve(data)
