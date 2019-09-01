@@ -11,7 +11,7 @@ const server = http.createServer(app.handleRequest).listen(3000, () => {
     var timestamp = date.getTime();
     fs.writeFile(__dirname + `/logs/${timestamp}.txt`, os.type() + '-' + os.platform() + ' ' + process.platform, function(err) {
     if(err) {
-        return console.log(err);
+        console.log(err);
     }
     console.log("The file was saved!");
     });
