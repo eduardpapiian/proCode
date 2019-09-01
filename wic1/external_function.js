@@ -1,5 +1,5 @@
 function name(name){
-    console.log(__filename)
+    console.log('NAME', __filename, name)
 }
 
 function calc(a, b){
@@ -7,6 +7,6 @@ function calc(a, b){
 }
 
 module.exports = {
-    func1: name,
+    name: name,
     func2: calc
 }

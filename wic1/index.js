@@ -1,11 +1,12 @@
 // const myFunc = require('./external_function')
 const fs = require('fs')
 const path = require('path')
-const {func1, func2} = require('./external_function')
+const {name, func2} = require('./external_function')
 const { user} = require('./objectFile')
 
-func1('Petya')
-func2(1, 3)
+console.log('FUNCTION', name)
+name('Petya')
+// func2(1, 3)
 
 // console.log(user.name)
 // console.log(__dirname, __filename)
