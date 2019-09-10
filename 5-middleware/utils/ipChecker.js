@@ -14,6 +14,6 @@ module.exports.ipChecker = function(req, res, next){
             console.log('IP NOT FIND')
             fs.appendFile(filepath, req.ip + '\r\n')
         }
-    });
+    }).catch(err => console.log('READ FILE ERROR', err));
     next()
 }
