@@ -1,27 +1,33 @@
 var express = require('express');
 var router = express.Router();
-const data = require('../storage/cars.json')
-var fs = require('fs');
-const filepath = process.cwd() + '/storage/cars.json'
+// const data = require('../storage/cars.json')
+const path = require('path');
+var fs = require('fs-extra');
+const filepath = path.join(__dirname, '../storage/cars.json')
 
 router.post('/', (req, res) =>{
-    const arg = Number(data.data[data.data.length - 1].id) + 1
-    var obj = {
-        id: arg,
-        manufacturer: req.body.name,
-        model: req.body.model,
-        price: req.body.price
-    }
-    console.log('obj', obj)
-    console.log('data', data.data)
-    let newData = data.data.push(obj)
-
-    fs.appendFile(filepath, newData)
-
-    // newData = newData
-    console.log(newData)
-    res.send(JSON.stringify(newData))
-    console.log('filepath', filepath)
+    fs.readFile(filepath, 'utf8', function readFileCallback(err, data){
+        if (err){
+            console.log(err);
+        } else {
+            console.log('data', data);
+            const objFromJson = JSON.parse(data);
+            console.log('objFromJson', objFromJson);
+            const arg = Number(objFromJson.data[objFromJson.data.length - 1].id) + 1;
+            const obj = {
+                id: arg,
+                manufacturer: req.body.name,
+                model: req.body.model,
+                price: req.body.price
+            };
+            objFromJson.data.push(obj);
+            const json = JSON.stringify(objFromJson)
+            fs.writeFile(filepath, json, err => {
+                console.log('SAVE ERROR', err)
+            })
+            res.send(objFromJson)
+        }
+    })
 })
 
 

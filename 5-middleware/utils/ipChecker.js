@@ -1,6 +1,7 @@
 const os = require('os');
 const fs = require('fs-extra')
-const filepath = process.cwd() + '/logs/logs.txt'
+const path = require('path');
+const filepath = path.join(__dirname, '../logs/logs.txt')
 
 console.log('filepath', filepath)
 module.exports.ipChecker = function(req, res, next){
