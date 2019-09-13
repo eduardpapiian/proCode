@@ -3,9 +3,9 @@ var router = express.Router();
 // const data = require('../storage/cars.json')
 const path = require('path');
 var fs = require('fs-extra');
-const filepath = path.join(__dirname, '../storage/cars.json')
 
 router.post('/', (req, res) =>{
+    const filepath = path.join(__dirname, '../storage/cars.json')
     fs.readFile(filepath, 'utf8', function readFileCallback(err, data){
         if (err){
             console.log(err);
