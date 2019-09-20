@@ -1,4 +1,4 @@
-const user = {
+const car = {
   $schema: 'http://json-schema.org/draft-07/schema#',
   type: 'object',
   properties: {
@@ -8,9 +8,15 @@ const user = {
       maxLength: 50,
     },
     mileage: {
-      type: ["string", "number"],
-      // minLength: 2,
-      // maxLength: 50,
+      anyOf: [
+        { type: "string",
+          enum: ["new"]
+        },
+        { type: "number",
+          minimum: 0,
+          maximum: 9000000,
+        }
+      ]
     },
     price: {
       type: 'number',
@@ -21,9 +27,9 @@ const user = {
       type:'array',
       items: {
         type: "string",
-        num: ["ABS", "Automatic", "ESP"]
+        enum: ["ABS", "Automatic", "ESP", "tunning"]
       }
     }
   },
 };
-module.exports = user;
+module.exports = car;

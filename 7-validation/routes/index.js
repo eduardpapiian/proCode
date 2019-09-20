@@ -27,8 +27,10 @@ router.post('/', (req, res) => {
       status: 'invalid data',
       payload: { errors },
     };
-    console.log(result.payload.errors);
+    console.log(result.payload);
     res.json(result.payload.errors);
+  }else{
+    res.send('valid')
   }
 });
 
