@@ -1,6 +1,6 @@
 var express = require('express');
 const Ajv = require('ajv');
-const carSchema = require('../schems/car');
+const carSchema = require('../schemas/car');
 
 var router = express.Router();
 
