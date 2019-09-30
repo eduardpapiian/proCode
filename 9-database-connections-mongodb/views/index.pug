@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  form(action='/', method='POST')
+    p
+      | From:
+      input(name='From', value='', type='text')
+      | To:
+      input(name='To', value='', type='text')
+    input(value='Find', type='submit')
+  ul
+    for item in data
+      li= "From: " + item.fromName
+      p= "To: " + item.toName
+      p= "Arrive: " + item.departAt
+      p= "Vehicle: " + item.vehicle
+      tr

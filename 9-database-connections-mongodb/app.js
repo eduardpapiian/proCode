@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://admin:123@cluster0-5avmd.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb://localhost/nodekb', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -14,7 +14,7 @@ const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   // we're connected!
-  console.log('connected to DB')
+  console.log('connected to Local DB')
 });
 
 var indexRouter = require('./routes/index');
@@ -25,6 +25,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
 
 app.use(logger('dev'));
 app.use(express.json());
