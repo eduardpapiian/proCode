@@ -1,12 +1,12 @@
 extends layout
 
 block content
-  form(action='/', method='POST')
+  form(action='/api/getTrip', method='GET')
     p
       | From:
-      input(name='From', value='', type='text')
-      | To:
-      input(name='To', value='', type='text')
+      input(name='from', value='', type='text')
+      //| To:
+      //input(name='To', value='', type='text')
     input(value='Find', type='submit')
   ul
     for item in data
