@@ -1,4 +1,6 @@
 const TripModel = require('../models/trip')
+
+
 const trips = [
   {
     "fromName": "Berlin, Germany",
@@ -37,7 +39,16 @@ const trips = [
     "vehicle": "train"
   }
 ]
-trips.forEach(val=>{
-  new TripModel(val).save()
 
-})
+trips.forEach(val=>{
+  saveTrip(val)
+});
+
+
+function saveTrip(data) {
+  var myTrip = new TripModel(data);
+  myTrip.save(function (err) {
+    if (err) console.log(err);
+    // saved!
+  });
+}
