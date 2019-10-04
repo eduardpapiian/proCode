@@ -1,5 +1,17 @@
 const TripModel = require('../models/trip')
+const mongoose = require('mongoose');
 
+mongoose.connect('mongodb://localhost:27017/nodekb', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  // we're connected!
+  console.log('connected to Local DB')
+});
 
 const trips = [
   {
@@ -46,7 +58,7 @@ trips.forEach(val=>{
 
 
 function saveTrip(data) {
-  var myTrip = new TripModel(data);
+  var myTrip = TripModel(data);
   myTrip.save(function (err) {
     if (err) console.log(err);
     // saved!
