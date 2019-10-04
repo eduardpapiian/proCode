@@ -48,7 +48,7 @@ trips.forEach(val=>{
 function saveTrip(data) {
   var myTrip = new TripModel(data);
   myTrip.save(function (err) {
-    if (err) return console.log(err);
+    if (err) console.log(err);
     // saved!
   });
 }
