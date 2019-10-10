@@ -1,5 +1,12 @@
 const TripModel = require('../models/trip')
+const mongoose = require('mongoose');
 
+mongoose.connect('mongodb://localhost:27017/nodekb', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+const db = mongoose.connection;
 
 const trips = [
   {
