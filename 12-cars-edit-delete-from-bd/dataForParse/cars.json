@@ -1,0 +1,76 @@
+{
+  "data":[
+    {
+      "id":1,
+      "manufacturer":"Porsche",
+      "model":"911",
+      "price":135000
+    },
+    {
+      "id":2,
+      "manufacturer":"Porsche 1",
+      "model":"912",
+      "price":135000
+    },
+    {
+      "id":3,
+      "manufacturer":"Porsche 2",
+      "model":"911",
+      "price":135000
+    },
+    {
+      "id":4,
+      "manufacturer":"Porsche 3",
+      "model":"911",
+      "price":135000
+    },
+    {
+      "id":5,
+      "manufacturer":"Porsche 4",
+      "model":"911",
+      "price":135000
+    },
+    {
+      "id":6,
+      "manufacturer":"Tesla",
+      "model":"111",
+      "price":4000
+    },
+    {
+      "id":7,
+      "manufacturer":"Tesla 1",
+      "model":"111",
+      "price":5000
+    },
+    {
+      "id":8,
+      "manufacturer":"Tesla 2",
+      "model":"5555",
+      "price":6000
+    },
+    {
+      "id":9,
+      "manufacturer":"Tesla 3",
+      "model":"dddd",
+      "price":8000
+    },
+    {
+      "id":10,
+      "manufacturer":"Tesla 4",
+      "model":"sss",
+      "price":9000
+    },
+    {
+      "id":11,
+      "manufacturer":"Tesla 5",
+      "model":"ssse",
+      "price":1000
+    },
+    {
+      "id":12,
+      "manufacturer":"Hummer",
+      "model":"11",
+      "price":500
+    }
+  ]
+}

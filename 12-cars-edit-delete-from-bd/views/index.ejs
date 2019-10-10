@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cars</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div>
+      <button id="add-car-btn">
+        ADD NEW CAR
+      </button>
+    </div>
+    <h1>Cars</h1>
+    <% for (var i = 0; i < data.length; i++) { %>
+    <div class="car-block">
+      <div class="car-block__info">
+        <b>Id: <i><%= data[i].id %></i></b>
+        <p>Manufacturer: <span><%= data[i].manufacturer %></span></p>
+        <p>Model: <span><%= data[i].model %></span></p>
+        <p>Price: <span><%= data[i].price %></span></p>
+      </div>
+      <div>
+        <button id="delete-car-btn" onClick=deleteCar(<%= data[i].id %>)>
+          Delete
+        </button>
+        <button id="change-price-car-btn">
+          Change Price
+        </button>
+      </div>
+    </div>
+    <hr>
+    <% } %>
+    <p><%= data %></p>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      function deleteCar(id){
+        const data = {
+          id: id
+        }
+        axios.post('/api/delete', data).then(res => {
+          console.log(res);
+          if(res.status === 200){
+            console.log('res', res)
+            getCars()
+          }
+        })
+          .catch(error => console.error('error', error));
+      }
+      function getCars(){
+        axios.get('/api/carList').then(res => {
+          if(res.status === 200){
+            console.log(res.data)
+        }
+        })
+          .catch(error => console.error('error', error));
+      }
+    </script>
+  </body>
+</html>
