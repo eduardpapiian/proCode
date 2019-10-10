@@ -34,21 +34,31 @@ router.post('/update', function(req, res, next) {
 router.post('/create', function(req, res, next) {
   CarModel.find({}).then(data => {
     console.log('data', data)
-    const arg = Number(data[data.length - 1].id) + 1;
-    console.log('arg', arg)
-    CarModel.findOne({id:arg}).then(data => {
-      if(data){
-        res.sendStatus(404)
-      }else{
-        req.body.id = arg
-        const car = CarModel(req.body)
-        car.save(function (err) {
-          if (err) console.log(err);
-          // saved!
-          res.send('ok')
-        })
-      }
-    })
+    if(data.length){
+      const arg = Number(data[data.length - 1].id) + 1;
+      console.log('arg', arg)
+      CarModel.findOne({id:arg}).then(data => {
+        if(data){
+          res.sendStatus(404)
+        }else{
+          req.body.id = arg
+          const car = CarModel(req.body)
+          car.save(function (err) {
+            if (err) console.log(err);
+            // saved!
+            res.send('ok')
+          })
+        }
+      })
+    }else{
+      req.body.id = 1
+      const car = CarModel(req.body)
+      car.save(function (err) {
+        if (err) console.log(err);
+        // saved!
+        res.send('ok')
+      })
+    }
   }).catch(err => console.log(err))
 });
 
