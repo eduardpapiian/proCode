@@ -3,8 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
+dotenv.config();
 
 mongoose.connect('mongodb://localhost:27017/userskb', {
   useNewUrlParser: true,
