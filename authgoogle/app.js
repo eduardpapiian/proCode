@@ -1,39 +1,22 @@
 var createError = require('http-errors');
 var express = require('express');
+const passport = require('passport')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
-const mongoose = require('mongoose');
-const keys = require('./config/keys');
-const cookieSession = require('cookie-session');
-const passport = require('passport')
-
-//connect to mongodb
-mongoose.connect(keys.mongodb.dbURI, ()=> {
-  console.log('connected to mongo db')
-})
+require('./config/authStrategies')
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const authRoutes = require('./routes/auth-routes');
-const passportSetup = require('./config/passport-setup');
+var googleRouter = require('./routes/google');
+var secretRouter = require('./routes/secret');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-
-app.use(cookieSession({
-  maxAge: 24 * 60 * 60 * 1000,
-  keys:[keys.session.cookieKey]
-}))
-
-//initialize passport
-app.use(passport.initialize());
-app.use(passport.session())
-
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -42,11 +25,13 @@ app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use('/', indexRouter);
-
 app.use('/users', usersRouter);
-
-app.use('/auth', authRoutes);
+app.use('/auth/google', googleRouter);
+app.use('/secret', secretRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
