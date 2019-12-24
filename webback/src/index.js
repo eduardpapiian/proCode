@@ -1,2 +1,4 @@
 console.log('gg')
-import bla from './xhopa.js'
+import here from './xhopa.js'
+
+here.here()
