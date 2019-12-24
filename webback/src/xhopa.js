@@ -1,1 +1,5 @@
-export default {}
+export default {
+  here: function (){
+    alert('hello world')
+  }
+}
