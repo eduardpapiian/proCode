@@ -1,0 +1,19 @@
+{
+  "name": "webback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardpapiian/proCode.git"
+  },
+  "author": "mikroffom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardpapiian/proCode/issues"
+  },
+  "homepage": "https://github.com/eduardpapiian/proCode#readme"
+}
