@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/eduardpapiian/proCode/issues"
   },
-  "homepage": "https://github.com/eduardpapiian/proCode#readme"
+  "homepage": "https://github.com/eduardpapiian/proCode#readme",
+  "dependencies": {
+    "react": "^16.12.0"
+  }
 }
