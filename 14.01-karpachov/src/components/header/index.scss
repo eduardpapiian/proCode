@@ -3,11 +3,46 @@
   height:72px;
   &__nav {
     display: flex;
-    width: 100%;
+    justify-content:space-between;
+    align-items:center;
+    max-width: 1000px;
+    margin:0 auto;
+    padding:20px 0;
     &_block{
       .menu{
         display:flex;
+        list-style-type:none;
+        padding-left:0;
+        li{
+          a{
+            text-decoration: none;
+            font-weight:700;
+            color:#222B3A;
+            font-family: Proxima Nova;
+            font-size: 16px;
+            line-height: 19px;
+            margin:0 12px;
+          }
+        }
       }
+    }
+    .login-btn_block{
+      display:flex;
+      align-items: center;
+      margin-right:40px;
+      .btn{
+        font-family: Proxima Nova;
+        font-weight:700;
+        font-size:16px;
+      }
+      &:hover{
+        cursor:pointer;
+      }
+    }
+    &_menu_block{
+      display:flex;
+      justify-content: space-between;
+      width:600px;
     }
   }
 }
