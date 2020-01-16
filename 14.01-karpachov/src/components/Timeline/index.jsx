@@ -12,14 +12,14 @@ export default function Timeline (props) {
       <div className="numbers">
         <div className='numbers_number'>
           <span>10</span>
-          <div class="text">
+          <div className="text">
             Тем <br/>
             всего
           </div>
         </div>
         <div className='numbers_number'>
           <span>6</span>
-          <div class="text">
+          <div className="text">
             Тем <br/>
             выволнено
           </div>

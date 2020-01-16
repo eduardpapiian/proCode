@@ -1,7 +1,7 @@
 .layout{
   background-image: url(img/child-background.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position:relative;
   &__block{
     width:1000px;
