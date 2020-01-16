@@ -31,7 +31,7 @@ class topBlock extends Component {
             <div>
               <Timeline/>
             </div>
-            <div>
+            <div className="layout__block_info_total-theme">
               Названия актуальной темы
             </div>
           </div>

@@ -1,9 +1,14 @@
 .timeline{
   .line{
-    height:18px;
+    height:14px;
     width:100%;
-    border-radius:2px;
+    border-radius:3px;
     background-color: #F3F3F3;
+    padding:2px;
+    .time{
+      height:100%;
+      background: linear-gradient(90deg, #0099DD 0%, #178EC2 100%);
+    }
   }
   .numbers{
     display:flex;

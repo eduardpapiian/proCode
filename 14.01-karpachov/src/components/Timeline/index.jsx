@@ -5,7 +5,9 @@ export default function Timeline (props) {
   return (
     <div className="timeline">
       <div className="line">
+        <div className="time">
 
+        </div>
       </div>
       <div className="numbers">
         <div className='numbers_number'>
