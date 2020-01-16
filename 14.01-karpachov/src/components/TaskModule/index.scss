@@ -1,0 +1,35 @@
+.task-module{
+  &_block{
+    text-align:left;
+    max-width:1000px;
+    margin:0 auto;
+    h2{
+      padding-left:30px;
+      font-family: Proxima Nova;
+      font-size: 32px;
+      line-height: 39px;
+      color: #222B3A;
+      position:relative;
+      &::before {
+        content:'';
+        height:2px;
+        right:0;
+        width:100%;
+        background-color: #222B3A;
+        position:absolute;
+        top: calc(50% + 2px);
+      }
+      &::after {
+        content:'';
+        height:2px;
+        width:100%;
+        background-color: #F1F1F1;
+        position:absolute;
+        top: calc(50% + 2px);
+      }
+      span{
+        background-color: #fff;
+      }
+    }
+  }
+}
