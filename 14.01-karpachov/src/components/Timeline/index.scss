@@ -1,0 +1,30 @@
+.timeline{
+  .line{
+    height:18px;
+    width:100%;
+    border-radius:2px;
+    background-color: #F3F3F3;
+  }
+  .numbers{
+    display:flex;
+    margin-top:4px;
+    &_number{
+      font-weight:600;
+      display:flex;
+      width:50%;
+      color: #222B3A;
+      span{
+        font-family: Proxima Nova;
+        font-size: 38px;
+        line-height: 42px;
+        margin-right:10px;
+      }
+      .text{
+        font-size:14px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
