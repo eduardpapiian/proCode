@@ -3,32 +3,98 @@
     text-align:left;
     max-width:1000px;
     margin:0 auto;
-    h2{
-      padding-left:30px;
-      font-family: Proxima Nova;
-      font-size: 32px;
-      line-height: 39px;
-      color: #222B3A;
-      position:relative;
-      &::before {
-        content:'';
-        height:2px;
-        right:0;
+    &_line{
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      .name-block{
         width:100%;
-        background-color: #222B3A;
-        position:absolute;
-        top: calc(50% + 2px);
+        h2{
+          padding-left:30px;
+          font-family: Proxima Nova;
+          font-size: 32px;
+          line-height: 39px;
+          color: #222B3A;
+          position:relative;
+          &::before {
+            content:'';
+            height:2px;
+            left:1px;
+            width:22px;
+            background-color: #222B3A;
+            position:absolute;
+            top: calc(50% + 2px);
+          }
+          &::after {
+            content:'';
+            height:2px;
+            max-width:700px;
+            left:250px;
+            width:100%;
+            background-color: #F1F1F1;
+            position:absolute;
+            top: calc(50% + 2px);
+          }
+          span{
+            background-color: #fff;
+          }
+        }
       }
-      &::after {
-        content:'';
-        height:2px;
-        width:100%;
-        background-color: #F1F1F1;
-        position:absolute;
-        top: calc(50% + 2px);
+      .rectangle-block{
+        width:30px;
+        height:30px;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        &:hover{
+          cursor:pointer;
+        }
       }
-      span{
-        background-color: #fff;
+    }
+    &_text{
+      margin:0 20px 20px 20px;
+      &_item{
+        display:flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #DFDADA;
+        padding-bottom:20px;
+        padding-top:20px;
+        &_first{
+          display:flex;
+          .number-block{
+            min-width: 25px;
+            height: 25px;
+            background: #F3F3F3;
+            border-radius: 3px 0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-right:20px;
+            span{
+              font-family: Proxima Nova;
+              font-size: 16px;
+              line-height: 19px;
+              color: #222B3A;
+              font-weight: 700;
+            }
+          }
+          .text-block{
+            font-family: Proxima Nova;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222B3A;
+          }
+        }
+        .checkbox-block{
+          min-width: 25px;
+          height: 25px;
+          background: #FAFAFA;
+          border: 1px solid #DADADA;
+          border-radius: 3px;
+          &:hover{
+            cursor:pointer;
+          }
+        }
       }
     }
   }
