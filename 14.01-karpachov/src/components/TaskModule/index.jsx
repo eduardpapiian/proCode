@@ -67,6 +67,22 @@ class TaskModule extends Component {
             ))}
 
           </div>
+
+          <div className="right-side-block">
+            <div className="item">
+              <img src="" alt=""/>
+            </div>
+            <div className="item">
+              <img src="" alt=""/>
+            </div>
+            <div className="item">
+              <img src="" alt=""/>
+            </div>
+            <div className="item">
+              <img src="" alt=""/>
+            </div>
+          </div>
+
         </div>
       </div>
     )

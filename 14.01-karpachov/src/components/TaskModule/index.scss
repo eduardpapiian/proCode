@@ -3,6 +3,7 @@
     text-align:left;
     max-width:1000px;
     margin:0 auto;
+    position:relative;
     &_line{
       display:flex;
       justify-content: space-between;
@@ -95,6 +96,23 @@
             cursor:pointer;
           }
         }
+      }
+    }
+    .right-side-block{
+      position:absolute;
+      right:-80px;
+      top:30px;
+      .item{
+        background: #FFFFFF;
+        border: 1px solid #DADADA;
+        width: 56px;
+        height: 56px;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.03);
+        border-radius: 3px;
+        margin:5px;
+      }
+      :hover{
+        cursor:pointer;
       }
     }
   }
