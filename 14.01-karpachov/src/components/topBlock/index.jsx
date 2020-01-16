@@ -6,7 +6,7 @@ class topBlock extends Component {
   constructor(props){
     super(props);
     this.state = {
-
+      percentage: 40
     }
   }
   componentWillMount(){
@@ -29,7 +29,7 @@ class topBlock extends Component {
               <p>правильные и четкие шаги для достижения цели.</p>
             </div>
             <div>
-              <Timeline/>
+              <Timeline value={this.state.percentage}/>
             </div>
             <div className="layout__block_info_total-theme">
               Названия актуальной темы

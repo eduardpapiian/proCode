@@ -5,7 +5,7 @@ export default function Timeline (props) {
   return (
     <div className="timeline">
       <div className="line">
-        <div className="time">
+        <div className="time" style={{ width: props.value + '%'}}>
 
         </div>
       </div>
