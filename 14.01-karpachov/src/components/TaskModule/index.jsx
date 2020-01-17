@@ -62,7 +62,6 @@ class TaskModule extends Component {
             </div>
           </div>
           <div className="task-module_block_text">
-
             {this.state.taskList.map((item, index) => (
               <div className="task-module_block_text_item" key={index}>
                 <div className="task-module_block_text_item_first">
@@ -80,7 +79,6 @@ class TaskModule extends Component {
 
               </div>
             ))}
-
           </div>
 
           <div className="right-side-block">
