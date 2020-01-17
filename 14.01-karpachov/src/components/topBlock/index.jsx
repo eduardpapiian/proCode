@@ -6,7 +6,7 @@ class topBlock extends Component {
   constructor(props){
     super(props);
     this.state = {
-      percentage: 40
+      percentage: 80
     }
   }
   componentWillMount(){
