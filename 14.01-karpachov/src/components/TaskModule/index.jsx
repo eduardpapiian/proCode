@@ -31,8 +31,11 @@ class TaskModule extends Component {
               <h2>Задачи модуля</h2>
             </div>
             <div onClick={this.click} className="rectangle-block">
-              <img src={rectangle} alt=""/>
+              <img className={this.state.in ? 'open' : 'close'} src={rectangle} alt=""/>
             </div>
+          </div>
+          <div className={`card-text ${this.state.in ? 'open' : 'close'}`}>
+            {this.props.children}
           </div>
           {/*<Transition in={this.state.in} timeout={150}>*/}
           {/*  {state => {*/}

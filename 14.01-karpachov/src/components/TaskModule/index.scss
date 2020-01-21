@@ -50,6 +50,25 @@
         &:hover{
           cursor:pointer;
         }
+        .open{
+          transform:rotate(180deg);
+          transition: all .5s linear;
+        }
+        .close{
+          transition: all .5s linear;
+        }
+      }
+    }
+    .card-text{
+      overflow-y:hidden;
+      transition-property: all;
+      transition-duration: .5s;
+      transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+      &.open{
+        height:400px;
+      }
+      &.close{
+        height:0;
       }
     }
   }
