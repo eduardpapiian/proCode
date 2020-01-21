@@ -6,6 +6,9 @@ import brainImg from "./img/brain.svg";
 import eyeIcon from "./img/eye-icon.svg";
 import listIcon from "./img/list-icon.svg";
 import timeIcon from "./img/time-icon.svg";
+import eyeIcon2 from "./img/eye-icon2.svg";
+import bellIcon from "./img/bell-icon.svg";
+import cheked from "./img/cheked.svg";
 
 
 export default class SecondBlock extends React.Component {
@@ -91,8 +94,12 @@ export default class SecondBlock extends React.Component {
                     <div></div>
                   </div>
                   <div className="second-block__item_main-block_actions">
-
+                    <span className="see-btn"><img src={eyeIcon2} alt=""/> Просмотр</span>
+                    <span className="bell-btn"><img src={bellIcon} alt=""/> Напомнить</span>
                   </div>
+                </div>
+                <div className="second-block__item_check-block">
+                  <img src={cheked} alt=""/>
                 </div>
               </div>
             ))}
