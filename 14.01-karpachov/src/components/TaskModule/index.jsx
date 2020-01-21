@@ -28,7 +28,7 @@ class TaskModule extends Component {
         <div className="task-module_block">
           <div className="task-module_block_line">
             <div className="name-block">
-              <h2>Задачи модуля</h2>
+              <h2>{this.props.title}</h2>
             </div>
             <div onClick={this.click} className="rectangle-block">
               <img className={this.state.in ? 'open' : 'close'} src={rectangle} alt=""/>
