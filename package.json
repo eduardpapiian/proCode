@@ -1,23 +1,4 @@
 {
-  "name": "webback",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eduardpapiian/proCode.git"
-  },
-  "author": "mikroffom",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eduardpapiian/proCode/issues"
-  },
-  "homepage": "https://github.com/eduardpapiian/proCode#readme",
-  "dependencies": {
-    "react": "^16.12.0"
   "name": "my-ap",
   "version": "0.1.0",
   "private": true,
@@ -25,16 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
-    "axios": "^0.19.1",
-    "immutability-helper": "^3.0.1",
-    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-redux": "^7.1.3",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "react-scripts": "3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
