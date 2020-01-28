@@ -11,7 +11,7 @@ export class index extends Component {
         const {  getUsers } = this.props;
         getUsers();
     }
-    
+
 
     render() {
         const { status, users } = this.props
@@ -30,7 +30,7 @@ export class index extends Component {
                 )
             })
         } else {
-            data = null
+            data = <div>crush</div>
         }
         return (
             <div>
