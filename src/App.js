@@ -7,12 +7,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import store from './store';
 import MainPage from './containers/Main';
 
-const App = ({ store }) => (
+const App = () => (
+  <Router>
   <Provider store={store}>
-    <Router>
+
       <Route path="/:id?" component={MainPage} />
-    </Router>
   </Provider>
+
+  </Router>
 )
 App.propTypes = {
   store: PropTypes.object.isRequired

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { getUsers as getUsersAction } from '../../actions/getUsers';
 
 export class index extends Component {
@@ -9,6 +10,7 @@ export class index extends Component {
 
     componentDidMount() {
         const {  getUsers } = this.props;
+        console.log(getUsers)
         getUsers();
     }
 
@@ -43,14 +45,13 @@ export class index extends Component {
 index.defaultProps = {
     users: []
 }
-
+//
 const mapStateToProps = (state) => ({
     status: state.appReducer.status,
     users: state.appReducer.users
 })
 
-const mapDispatchToProps = dispatch => {
-    return {getUsers: ()=>{ dispatch(getUsersAction()) } }
-}
+const mapDispatchToProps = dispatch => ({getUsers: ()=>{ dispatch(getUsersAction()) } })
 
 export default connect(mapStateToProps, mapDispatchToProps)(index)
+// export default index
