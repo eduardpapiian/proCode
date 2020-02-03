@@ -11,7 +11,7 @@ const initialState = {
     count: 0,
     users: [],
     status: 'loading' // loading/success/err
-}
+};
 
 export default function(state=initialState, action){
     switch (action.type) {
