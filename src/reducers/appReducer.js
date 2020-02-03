@@ -20,19 +20,18 @@ export default function(state=initialState, action){
         case USERS_LOADING:
             return update(state, {
                 status: { $set: 'loading'}
-            })
+            });
         case USERS_SUCCESS:
             console.log(state)
             return update(state, {
                 users: { $set: action.users },
                 status: { $set: 'success'},
 
-            })
-            console.log(state)
+            });
         case USERS_ERR:
             return update(state, {
                 status: { $set: 'err'}
-            })
+            });
         default:
             return state;
     }
