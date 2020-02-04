@@ -3,22 +3,26 @@ import logo from './logo.svg';
 import PropTypes from 'prop-types'
 import './App.css';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom';
 import store from './store';
 import MainPage from './containers/Main';
+import { createBrowserHistory } from "history";
+import { syncHistoryWithStore } from 'react-router-redux'
+import ToDo from './containers/ToDo';
+
+const history = createBrowserHistory(HashRouter, store)
 
 const App = () => (
-  <Router>
   <Provider store={store}>
-
-      <Route path="/:id?" component={MainPage} />
+    <Router history={history}>
+      <Route path="/" component={MainPage} />
+    </Router>
   </Provider>
+);
 
-  </Router>
-)
 App.propTypes = {
   store: PropTypes.object.isRequired
-}
+};
 
 export default App
 

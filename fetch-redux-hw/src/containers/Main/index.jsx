@@ -8,10 +8,9 @@ class index extends Component {
     render() {
         return (
             <div>
-
-            <TableComponent/>
-            <KokoitaComponent/>
-               <Todos /> 
+               <TableComponent/>
+               <KokoitaComponent/>
+               <Todos />
             </div>
         );
     }

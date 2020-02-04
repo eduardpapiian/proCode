@@ -10,19 +10,19 @@ export class index extends Component {
 
     componentDidMount() {
         const {  getUsers } = this.props;
-        console.log(getUsers)
+        console.log(getUsers);
         getUsers();
     }
 
 
     render() {
-        const { status, users } = this.props
-        console.log(status, users)
+        const { status, users } = this.props;
+        console.log(status, users);
         let data;
         if(status === 'loading'){
             data = <h1>Loading</h1>
         } else if (status === 'success') {
-            console.log(123)
+            console.log(123);
             data = users.map((el, idx) => {
                 return (
                     <div style={{border: '1px solid'}}>
@@ -44,12 +44,12 @@ export class index extends Component {
 
 index.defaultProps = {
     users: []
-}
+};
 //
 const mapStateToProps = (state) => ({
     status: state.appReducer.status,
     users: state.appReducer.users
-})
+});
 
 const mapDispatchToProps = dispatch => ({getUsers: ()=>{ dispatch(getUsersAction()) } })
 
