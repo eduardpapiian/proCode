@@ -15,10 +15,10 @@ const App = () => (
   </Provider>
 
   </Router>
-)
+);
 App.propTypes = {
   store: PropTypes.object.isRequired
-}
+};
 
 export default App
 

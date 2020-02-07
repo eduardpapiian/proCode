@@ -9,9 +9,9 @@ class index extends Component {
         return (
             <div>
 
-            <TableComponent/>
-            <KokoitaComponent/>
-               <Todos /> 
+              <TableComponent/>
+              <KokoitaComponent/>
+               <Todos />
             </div>
         );
     }
